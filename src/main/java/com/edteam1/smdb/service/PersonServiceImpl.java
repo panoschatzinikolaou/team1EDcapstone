@@ -24,16 +24,16 @@ public class PersonServiceImpl extends BaseServiceImpl<Person> implements Person
 
     @Override
     public List<Person> findByOccupation(Occupation occupation) {
-        return null;
+        return personRepository.findAllByOccupation(occupation);
     }
 
     @Override
     public List<Person> findByName(String name) {
-        return null;
+        return personRepository.findAllByName(name);
     }
 
     @Override
     public List<Person> findByAge(String age) {
-        return null;
+        return personRepository.findAllByAge(age);
     }
 }

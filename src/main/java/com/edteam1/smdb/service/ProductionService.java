@@ -12,7 +12,7 @@ public interface ProductionService extends BaseService<Production,Long>{
 
     List<Production> findByReleasedDate(Date releasedDate);
 
-    List<Production> findByTitleAndType(String title, ProductionType type);
+    Production findByTitleAndType(String title, ProductionType type);
 
     List<Production> findByReleasedDateAndType(Date releasedDate, ProductionType type);
 

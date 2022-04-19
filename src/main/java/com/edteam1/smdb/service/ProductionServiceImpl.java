@@ -25,21 +25,21 @@ public class ProductionServiceImpl extends BaseServiceImpl<Production> implement
 
     @Override
     public List<Production> findByTitle(String title) {
-        return null;
+        return productionRepository.findAllByTitle(title);
     }
 
     @Override
     public List<Production> findByReleasedDate(Date releasedDate) {
-        return null;
+        return productionRepository.findAllByReleasedYear(releasedDate);
     }
 
     @Override
-    public List<Production> findByTitleAndType(String title, ProductionType type) {
-        return null;
+    public Production findByTitleAndType(String title, ProductionType type) {
+        return productionRepository.findByTitleAndType(title,type);
     }
 
     @Override
     public List<Production> findByReleasedDateAndType(Date releasedDate, ProductionType type) {
-        return null;
+        return productionRepository.findAllByReleasedYearAndType(releasedDate,type);
     }
 }
