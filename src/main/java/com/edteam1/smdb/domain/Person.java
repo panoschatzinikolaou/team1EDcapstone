@@ -14,11 +14,13 @@ import java.util.Set;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-@ToString(callSuper = true)
+@ToString
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "PERSON")
-@SequenceGenerator(name = "idGenerator", sequenceName = "PERSON_SEQ", allocationSize = 1)
+@Table(name = "PERSON", uniqueConstraints = {
+        @UniqueConstraint(name = "uc_person_email", columnNames = {"email"})
+})
+@SequenceGenerator(name = "idGenerator", sequenceName = "PERSON_SEQ", allocationSize = 1, initialValue = 1)
 public class Person extends BaseModel{
 
     @NotNull
