@@ -16,7 +16,7 @@ public interface PersonRepository extends JpaRepository<Person,Long> {
     @Query("select p from Person p join fetch p.productions")
     List<Person> findAllLazy();
 
-    List<Person> findAllByName(String name);
+    Person findByName(String name);
 
     List<Person> findAllByOccupation(Occupation occupation);
 

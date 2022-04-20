@@ -38,17 +38,9 @@ public class Production extends BaseModel{
     @Column(length = 10, nullable = false)
     private ProductionType type;
 
-    @ManyToMany
+    @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(name = "Person_Production",
             joinColumns = @JoinColumn(name = "production_id"),
             inverseJoinColumns = @JoinColumn(name = "person_id"))
-    private Set<Person> persons = new HashSet<>();
-
-    public Set<Person> getPersons() {
-        return persons;
-    }
-
-    public void setPersons(Set<Person> persons) {
-        this.persons = persons;
-    }
+    Set<Person> persons = new HashSet<>();
 }

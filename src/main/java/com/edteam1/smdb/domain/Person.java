@@ -39,6 +39,6 @@ public class Person extends BaseModel{
     @Column(length = 10, nullable = false)
     private Occupation occupation;
 
-    @ManyToMany(cascade = { CascadeType.ALL }, mappedBy = "persons")
-    Set<Production> productions = new HashSet<>();
+    @ManyToMany(mappedBy = "persons")
+    private Set<Production> productions = new HashSet<>();
 }

@@ -9,7 +9,7 @@ public interface PersonService extends BaseService<Person,Long>{
 
     List<Person> findByOccupation(Occupation occupation);
 
-    List<Person> findByName(String name);
+    Person findByName(String name);
 
     List<Person> findByAge(String age);
 }

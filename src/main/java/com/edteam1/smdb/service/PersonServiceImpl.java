@@ -28,8 +28,8 @@ public class PersonServiceImpl extends BaseServiceImpl<Person> implements Person
     }
 
     @Override
-    public List<Person> findByName(String name) {
-        return personRepository.findAllByName(name);
+    public Person findByName(String name) {
+        return personRepository.findByName(name);
     }
 
     @Override
