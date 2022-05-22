@@ -1,9 +1,6 @@
 package com.edteam1.smdb.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
@@ -38,9 +35,9 @@ public class Production extends BaseModel{
     @Column(length = 10, nullable = false)
     private ProductionType type;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany
     @JoinTable(name = "Person_Production",
             joinColumns = @JoinColumn(name = "production_id"),
             inverseJoinColumns = @JoinColumn(name = "person_id"))
-    Set<Person> persons = new HashSet<>();
+    @Builder.Default Set<Person> persons = new HashSet<>();
 }

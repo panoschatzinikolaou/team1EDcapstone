@@ -1,9 +1,6 @@
 package com.edteam1.smdb.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
@@ -40,5 +37,5 @@ public class Person extends BaseModel{
     private Occupation occupation;
 
     @ManyToMany(mappedBy = "persons")
-    private Set<Production> productions = new HashSet<>();
+    @Builder.Default private Set<Production> productions = new HashSet<>();
 }

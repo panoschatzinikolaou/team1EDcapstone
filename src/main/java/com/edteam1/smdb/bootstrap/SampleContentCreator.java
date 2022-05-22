@@ -47,15 +47,14 @@ public class SampleContentCreator extends BaseComponent implements CommandLineRu
 
 		b1.getPersons().add(a1);
 		b1.getPersons().add(a2);
+		b2.getPersons().add(a3);
+		b2.getPersons().add(a4);
+		b3.getPersons().add(a4);
+		b3.getPersons().add(a2);
+		b4.getPersons().add(a3);
+		b5.getPersons().add(a2);
 
 		productionService.createAll(b1, b2, b3, b4, b5, b6);
 		logger.debug("Saved Productions {}, {}, {}, {}, {}, {}.", b1, b2, b3, b4, b5, b6);
-
-
-
-
-
-
-		//authorService.assign(a1, b1, BigDecimal.valueOf(2001L));
 	}
 }

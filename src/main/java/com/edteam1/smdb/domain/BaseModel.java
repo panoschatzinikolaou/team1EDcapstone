@@ -11,6 +11,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @MappedSuperclass
 public class BaseModel {
+    //private static final long serialVersionUID = 205641341261588815L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "idGenerator")
     @Column(updatable = false)
