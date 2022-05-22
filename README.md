@@ -1,4 +1,3 @@
-# team1EDcapstone
 ## SpringBoot European Dynamics Capstone Project
 
 ### Technology Stack
