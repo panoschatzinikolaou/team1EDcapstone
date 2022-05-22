@@ -1,2 +1,8 @@
 # team1EDcapstone
-SpringBoot ED Capstone Project
+## SpringBoot European Dynamics Capstone Project
+
+### Technology Stack
+* Java 11
+* Spring Boot latest production release
+* Maven latest production release
+* H2 database server
